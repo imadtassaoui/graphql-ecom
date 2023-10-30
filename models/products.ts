@@ -24,3 +24,11 @@ export const getProductByPrice = (minPrice: number, maxPrice: number) => {
 export const getProductById = (id: string) => {
   return products.find((product) => product.id === id);
 };
+
+export const addNewProduct = (
+  id: string,
+  description: string,
+  price: number
+) => {
+  products.push({ id, description, price });
+};

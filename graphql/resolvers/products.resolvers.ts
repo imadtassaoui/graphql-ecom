@@ -1,4 +1,5 @@
 import {
+  addNewProduct,
   getAllProducts,
   getProductById,
   getProductByPrice,
@@ -14,6 +15,11 @@ module.exports = {
     },
     productById: (_: any, args: any) => {
       return getProductById(args.id);
+    },
+  },
+  Mutation: {
+    addNewProduct: (_: any, args: any) => {
+      addNewProduct(args.id, args.description, args.price);
     },
   },
 };
